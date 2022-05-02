@@ -1,3 +1,9 @@
+/*
+takes no. of arrays and queries 
+then follows n lines each contain size(s) and nxt s elements
+nxt lines contain queries i.e., 0 1-----> o0th array 1st element
+*/
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
