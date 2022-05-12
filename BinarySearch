@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int bs(int a[],int low,int high,int k){
+    int mid=(low+high)/2;
+    //cout<<k<<endl;
+    while(low<high){
+    if(a[mid]==k){
+        return mid;
+    }else if(a[mid]<k){
+        cout<<"ri8"<<endl;
+        low=mid+1;
+        return(bs(a,low,high,k));
+    }else if(a[mid]>k){
+        cout<<"left"<<endl;
+        high=mid-1;
+        return(bs(a,low,high,k));
+        
+    }}
+    cout<<"out"<<endl;
+    return(-1);
+}
+int main()
+{
+    int n=13,key=99;
+    int a[n]={1,2,3,4,5,13,25,34,45,56,67,78,89};
+    int index=bs(a,0,n,key);
+    cout<<index;
+
+    return 0;
+}
